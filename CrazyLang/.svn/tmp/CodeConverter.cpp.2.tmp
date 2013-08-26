@@ -1,0 +1,160 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <cstring>
+
+
+
+
+#include "leegwiro_list.h"
+#include "leegwiro_operator_array.h"
+#include "CodeConverter.h"
+#include "KyoungMin_parser.h"
+#include "InputDataClass.h"
+
+#include "OutputWnd.h"
+#include "MainFrm.h"
+using namespace std;
+
+
+
+#include <windows.h>
+
+int cnt=0;
+
+void CodeConverter::CodeConverte(char *codeStr, List *pList, Array *pAry, int *pDataStructureFlag ) {
+	
+
+	char data = 0;
+	int codeLen = strlen(codeStr);
+	int repeatPoint = 0;
+	CString temp;
+
+	char operation[10000];
+
+	
+
+
+	for (int i = 0; i < codeLen; i++) {
+		
+
+		if (*pDataStructureFlag == 0) {
+			switch (codeStr[i])	{
+			case '<' :
+				move_left_list(pList);
+				operation[i]='&';
+				tmep2+=operation[i];
+				break;
+			case '>' :
+				move_right_list(pList);
+				operation[i]='&';
+				tmep2+=operation[i];
+				break;
+			case '/' :
+				*pDataStructureFlag = 1;
+				//operation[i]=get_data_array(pAry);
+				tmep2+='/';//operation[i];
+				break;
+			}
+		}
+		else if (*pDataStructureFlag == 1) {
+			switch (codeStr[i])	{
+			case '<' :
+				move_left_array(pAry);
+				operation[i]=get_data_array(pAry);
+				tmep2+=operation[i];
+
+				break;
+			case '>' :
+				move_right_array(pAry);
+				operation[i]=get_data_array(pAry);
+				tmep2+=operation[i];
+
+				break;
+			case '.' :
+				data = get_data_array(pAry);
+				operation[i]=get_data_array(pAry);
+				tmep2+=operation[i];
+
+				if(i == codeLen-1) {
+					if(cnt % 2 == 1) {
+						//MessageBox(NULL, TEXT("괄호의 짝이 맞지 않습니다!!"), TEXT("예외상황 발생!!"), NULL);
+						csDump = "괄호의 짝이 맞지 않습니다!!";
+					}
+				}
+
+				if (data == '+') {
+					add_data_list(pList);
+				}
+				else if (data == '-') {
+					sub_data_list(pList);
+				}
+				else if (data == '[') {
+					cnt++;
+
+					repeatPoint = i;
+				}
+				else if (data == ']') {
+					cnt++;
+
+					if (get_data_list(pList) != 0) {
+						move_left_array(pAry);
+						i = repeatPoint;
+					}
+				}
+				else if (data == 's') {
+				
+					//AfxMessageBox(_T("정지"));
+
+					
+					InputDataClass input;
+					
+					input.DoModal();
+
+					
+
+
+					//input.InputDataEdit.SetFocus();
+					//input.SetFocus();
+
+					CMainFrame *pFrame = (CMainFrame *)AfxGetMainWnd();
+
+					pList->point->data=pFrame->inputDatavalue.getInputData();
+
+					//=10;
+					TRACE(TEXT("입력을 받아야함\n"));
+				}
+				else if (data == 'p') {
+
+					outputData = pList->point->data;
+
+					outputStr.Format(_T("%d"), outputData);
+					csDump += outputStr;
+
+					
+
+				}
+				else if (data == 'c') {
+
+					outputData = pList->point->data;
+
+
+					outputStr.Format(_T("%c"), (char)outputData);
+					csDump += outputStr;
+				}
+
+				break;
+			case '/' :
+				*pDataStructureFlag = 0;
+				operation[i]=get_data_array(pAry);
+				tmep2+='/';//=operation[i];
+				break;
+			}
+		}
+
+		pList->display_list(pList);
+		pAry->display_array(pAry);
+
+	}
+}
+

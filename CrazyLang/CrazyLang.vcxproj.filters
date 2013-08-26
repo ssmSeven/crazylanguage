@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\output_wnd.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\output_wnd_hc.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="UserImages.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\CrazyLang.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\CrazyLangDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\CrazyLang.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\clloading1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\plus.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\minusicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\새 폴더\plus1.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\plusicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\forstarticon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\forcloseicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\inicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\printicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\indicateicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\indicateiconhidden.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\indicationbackground.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\buildbackground.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\inputbackground.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\desktop\단기과제 이미지\bitmap8.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\inputokbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\playbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\stopbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\debugbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\inputbackground.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\inputokbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\playbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\stopbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\debugbtn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\charimage.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\desktop\단기과제 이미지\icon9.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\charicon.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\단기과제 이미지\charicon.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\mainbmp.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\mainbmp.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CrazyLang.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CrazyLangDoc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CrazyLangView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputWnd.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingBox.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IndicateViewer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputRapDialog.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildOoutput.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeConverter.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KyoungMin_parser.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="leegwiro_list.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="leegwiro_operator_array.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ler_CircularQueue.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDataClass.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDataValue.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CrazyLang.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CrazyLangDoc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CrazyLangView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputWnd.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingBox.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IndicateViewer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputRapDialog.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildOoutput.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeConverter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="KyoungMin_parser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="leegwiro_list.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="leegwiro_operator_array.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ler_CircularQueue.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDataClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDataValue.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CrazyLang.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

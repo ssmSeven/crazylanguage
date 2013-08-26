@@ -1,0 +1,134 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <cstring>
+
+
+
+
+#include "leegwiro_list.h"
+#include "leegwiro_operator_array.h"
+#include "CodeConverter.h"
+#include "KyoungMin_parser.h"
+#include "InputDataClass.h"
+
+#include "OutputWnd.h"
+#include "MainFrm.h"
+using namespace std;
+
+
+
+#include <windows.h>
+
+void CodeConverter::CodeConverte(char *codeStr, List *pList, Array *pAry, int *pDataStructureFlag ) {
+	
+
+	char data = 0;
+	int codeLen = strlen(codeStr);
+	int repeatPoint = 0;
+	CString temp;
+
+	
+
+	
+
+
+	for (int i = 0; i < codeLen; i++) {
+		
+
+		if (*pDataStructureFlag == 0) {
+			switch (codeStr[i])	{
+			case '<' :
+				move_left_list(pList);
+				break;
+			case '>' :
+				move_right_list(pList);
+				break;
+			case '/' :
+				*pDataStructureFlag = 1;
+				break;
+			}
+		}
+		else if (*pDataStructureFlag == 1) {
+			switch (codeStr[i])	{
+			case '<' :
+				move_left_array(pAry);
+				break;
+			case '>' :
+				move_right_array(pAry);
+				break;
+			case '.' :
+				data = get_data_array(pAry);
+
+				if (data == '+') {
+					add_data_list(pList);
+				}
+				else if (data == '-') {
+					sub_data_list(pList);
+				}
+				else if (data == '[') {
+					repeatPoint = i;
+				}
+				else if (data == ']') {
+					if (get_data_list(pList) != 0) {
+						move_left_array(pAry);
+						i = repeatPoint;
+					}
+				}
+				else if (data == 's') {
+				
+					//AfxMessageBox(_T("정지"));
+
+					
+					InputDataClass input;
+					
+					input.DoModal();
+
+					
+
+
+					//input.InputDataEdit.SetFocus();
+					//input.SetFocus();
+
+					CMainFrame *pFrame = (CMainFrame *)AfxGetMainWnd();
+
+					pList->point->data=pFrame->inputDatavalue.getInputData();
+
+					//=10;
+					TRACE(TEXT("입력을 받아야함\n"));
+				}
+				else if (data == 'p') {
+
+					outputData = pList->point->data;
+
+					outputStr.Format(_T("%d"), outputData);
+					csDump += outputStr;
+
+				
+
+				}
+				else if (data == 'c') {
+
+					outputData = pList->point->data;
+
+
+
+
+
+					outputStr.Format(_T("%c"), outputData);
+					csDump += outputStr;
+				}
+
+				break;
+			case '/' :
+				*pDataStructureFlag = 0;
+				break;
+			}
+		}
+
+		pList->display_list(pList);
+		pAry->display_array(pAry);
+
+	}
+}
+
